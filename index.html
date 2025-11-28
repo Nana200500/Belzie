@@ -163,6 +163,30 @@ body{
     aspect-ratio: 9/16;
     object-fit: cover;
 }
+  .btn-note {
+  margin: 12px auto;
+  padding: 12px 16px;
+  width: 90%;
+  max-width: 360px; /* match pics/videos */
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+
+  /* iOS-style frosted glass */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  /* subtle floating animation */
+  animation: floatPic 8s ease-in-out infinite alternate;
+}
+.btn-note div {
+  margin: 4px 0; /* spacing between lines */
+}
 @keyframes floatPic{0%{transform:translateY(0px)}50%{transform:translateY(-6px)}100%{transform:translateY(0px)}}
 @keyframes floatVid{0%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-5px) rotate(1deg)}100%{transform:translateY(0px) rotate(0deg)}}
 
@@ -325,6 +349,13 @@ Enjoy your day and happy birthday once again 🎈💛💙
     <input type="file" id="uploadAudio" accept="audio/*" class="btn ok" style="cursor:pointer;">
     <button class="btn ok" id="playOriginal">Play Original</button>
   </div>
+
+  <!-- Instructions for buttons (iOS-style frosted glass) -->
+<div class="btn-note">
+  <div>🎵 Click "Pause/Play" to start or pause music.</div>
+  <div>🎵 Upload your own audio using the file button.</div>
+  <div>🎵 Click "Play Original" to reset the birthday song.</div>
+</div>
 
   <footer>Made By NanaB💛 </footer>
 </div>
