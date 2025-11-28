@@ -230,14 +230,26 @@ body{
 @keyframes floatVid{0%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-5px) rotate(1deg)}100%{transform:translateY(0px) rotate(0deg)}}
 
 /* Speech section */
-.speech{
-  font-family:'Patrick Hand',cursive;
-  font-size:1.15rem;
-  color:#ffe6f0;
-  line-height:1.5;
-  max-width:360px;
-  margin:8px auto;
-  text-align:left;
+.speech {
+  font-family: 'Poppins', sans-serif; /* readable, still stylish */
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 540px;
+  margin: 12px auto;
+  text-align: left;
+
+  /* Crystal-clear iOS glass */
+  background: rgba(255, 255, 255, 0.01); /* almost transparent */
+  backdrop-filter: blur(3px); /* subtle blur */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  padding: 16px 20px;
+
+  /* subtle floating animation */
+  animation: floatPic 8s ease-in-out infinite alternate;
 }
 
 /* Public figure */
