@@ -288,7 +288,7 @@ footer{margin-top:16px;color:rgba(255,255,255,0.95);font-size:13px;}
 
 <div class="wrap">
   <!-- Neon Heading -->
-  <div class="hbb-text"><h1>HAPPY BIRTHDAY<br><span>💙💛 ISABELLA 💝</span></h1></div>
+  <div class="hbb-text"><h1>Happy Birthday<br><span>💙💛 ISABELLA 💝</span></h1></div>
   <div class="subline">Our one and only Belzie</div>
 
   <!-- Pictures -->
@@ -319,20 +319,6 @@ Happy birthday once again🎈💛💙 <br> <b>🔥Enjoy Your Day😎</b>
     <div class="public-figure">HAPPY BIRTHDAY <strong id="publicTag">PUBLIC FIGURE😂</strong></div>
   </section>
 
-  <!-- Audio Controls -->
-  <div class="btn-row" style="margin-top:12px;">
-    <button class="btn ok" id="playPauseBtn">Play / Pause</button>
-    <input type="file" id="uploadAudio" accept="audio/*" class="btn ok" style="cursor:pointer;">
-    <button class="btn ok" id="playOriginal">Play Original</button>
-  </div>
-
-  <!-- Instructions -->
-  <div class="btn-note">
-    <div>🎵 Click "Pause/Play" to start or pause music.</div>
-    <div>🎵 Upload your own audio using the file button.</div>
-    <div>🎵 Click "Play Original" to reset the birthday song.</div>
-  </div>
-
   <footer>Made with 💙 <br> 😎NanaB🫵 </footer>
 </div>
 
@@ -354,32 +340,6 @@ Happy birthday once again🎈💛💙 <br> <b>🔥Enjoy Your Day😎</b>
       vids.forEach(v=>v.play().catch(()=>{}));
   });
   closeIntroBtn.addEventListener('click', ()=>window.close());
-
-  // Audio controls
-  const playPauseBtn = document.getElementById('playPauseBtn');
-  const uploadAudio = document.getElementById('uploadAudio');
-  const playOriginalBtn = document.getElementById('playOriginal');
-
-  playPauseBtn.addEventListener('click',()=>{
-    if(bgAudio.paused){
-      bgAudio.play().catch(()=>{});
-    }else{
-      bgAudio.pause();
-    }
-  });
-
-  uploadAudio.addEventListener('change',(e)=>{
-    if(e.target.files.length>0){
-      const file = URL.createObjectURL(e.target.files[0]);
-      bgAudio.src = file;
-      bgAudio.play().catch(()=>{});
-    }
-  });
-
-  playOriginalBtn.addEventListener('click',()=>{
-    bgAudio.src='Bsong.mp3';
-    bgAudio.play().catch(()=>{});
-  });
 
   // Floating emojis
   const emojis = ['❤️','💛','💙','🎉','🎈','✨','😂','💫'];
